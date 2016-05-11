@@ -1,0 +1,326 @@
+2016-04-09 13:00:00] VERBOSE[15769] pbx_spool.c:     -- Attempting call on Local/s@tc-maint for application NoCDR() (Retry 1)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:1] NoCDR("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:2] Set("Local/s@tc-maint-00000c4a;2", "TCMAINT=RETURN") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:3] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,6,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/6/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/6/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "19:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,6,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/6)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC6)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [6@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:4] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,18,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/18/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/18/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,*,3,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,*,3,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,*,4,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,*,5,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:6] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,sat-sun,*,*,Asia/Tokyo?truestat$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:7] GotoIfTime("Local/s@tc-maint-00000c4a;2", "10:00-18:00,mon-fri,15-1,apr-jul,Asia$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:8] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00,*,29,apr,Asia/Tokyo?truestate")$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:9] GotoIf("Local/s@tc-maint-00000c4a;2", "0?truegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:10] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/18)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:11] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC18)=INUSE") in new st$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:12] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:13] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:14] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:15] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [18@timeconditions:16] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:5] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,20,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/20/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/20/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*?truestate") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,20,19)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:19] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:20] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/20)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:21] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC20)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:22] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:23] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-20,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:24] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:25] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [20@timeconditions:26] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:6] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,16,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/16/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/16/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "17:00-09:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:4] GotoIf("Local/s@tc-maint-00000c4a;2", "0?truegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:5] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/16)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:6] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC16)=INUSE") in new sta$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:7] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:8] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:9] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:10] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [16@timeconditions:11] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:7] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,15,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/15/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/15/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/15/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "17:00-09:29,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,15,36)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:36] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:37] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/15)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:38] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC15)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:39] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:40] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-17,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:42] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [15@timeconditions:43] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:8] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,14,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/14/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/14/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "17:00-09:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,14,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/14)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC14)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-15,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [14@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:9] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,13,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/13/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/13/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,5,may,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "17:00-09:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,4,may,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:6] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,13,18)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:18] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:19] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/13)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:20] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC13)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:21] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:22] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-13,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:23] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:23] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:24] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [13@timeconditions:25] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:10] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,12,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/12/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/12/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "19:00-09:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,12,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/12)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC12)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-7,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [12@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:11] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,11,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/11/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/11/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "00:00-23:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,5,may,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,4,may,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:6] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,3,nov,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:7] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,3,may,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:8] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,3,jan,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:9] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,31,dec,Asia/Tokyo?truestate") in $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:10] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,30,dec,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:11] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,2,jan,Asia/Tokyo?truestate") in $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:12] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,29,apr,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:13] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,23,nov,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:14] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,23,dec,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:15] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,22,sep,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:16] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,21,mar,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:17] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,20,mar,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:18] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,1,jan,Asia/Tokyo?truestate") in $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:19] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,19,sep,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:20] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,18,jul,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:21] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,11,jan,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:22] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,*,11,feb,Asia/Tokyo?truestate") in$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:23] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate")$
+
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:23] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate")$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,11,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/11)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC11)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [11@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:12] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,10,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/10/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/10/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,10,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/10)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC10)=NOT_INUSE") in ne$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-19,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [10@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:13] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,9,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/9/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/9/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "16:00-09:29,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4a;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Goto (timeconditions,9,35)
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4a;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(DB(TC/9)=)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:37] Set("Local/s@tc-maint-00000c4a;2", "DEVICE_STATE(Custom:TC9)=NOT_INUSE") in new $
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4a;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4a;2", "0?app-announcement-9,s,1") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:40] Set("Local/s@tc-maint-00000c4a;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:41] Set("Local/s@tc-maint-00000c4a;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [9@timeconditions:42] Return("Local/s@tc-maint-00000c4a;2", "") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [s@tc-maint:14] Gosub("Local/s@tc-maint-00000c4a;2", "timeconditions,8,1()") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [8@timeconditions:1] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/8/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [8@timeconditions:2] Set("Local/s@tc-maint-00000c4a;2", "DB(TC/8/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:00:00] VERBOSE[15770][C-00000ce4] pbx.c:     -- Executing [8@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4a;2", "18:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:00:04] VERBOSE[15828] pbx_spool.c:     -- Attempting call on Local/s@tc-maint for application NoCDR() (Retry 1)
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:1] NoCDR("Local/s@tc-maint-00000c4b;2", "") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:2] Set("Local/s@tc-maint-00000c4b;2", "TCMAINT=RETURN") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:3] Gosub("Local/s@tc-maint-00000c4b;2", "timeconditions,6,1()") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:1] Set("Local/s@tc-maint-00000c4b;2", "DB(TC/6/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:2] Set("Local/s@tc-maint-00000c4b;2", "DB(TC/6/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4b;2", "19:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4b;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Goto (timeconditions,6,35)
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4b;2", "0?falsegoto") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4b;2", "0?Set(DB(TC/6)=)") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:37] Set("Local/s@tc-maint-00000c4b;2", "DEVICE_STATE(Custom:TC6)=NOT_INUSE") in new $
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4b;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4b;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:40] Set("Local/s@tc-maint-00000c4b;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:41] Set("Local/s@tc-maint-00000c4b;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [6@timeconditions:42] Return("Local/s@tc-maint-00000c4b;2", "") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:4] Gosub("Local/s@tc-maint-00000c4b;2", "timeconditions,18,1()") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [18@timeconditions:1] Set("Local/s@tc-maint-00000c4b;2", "DB(TC/18/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [18@timeconditions:2] Set("Local/s@tc-maint-00000c4b;2", "DB(TC/18/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [18@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4b;2", "00:00,*,3,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [18@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4b;2", "00:00,*,4,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [18@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4b;2", "00:00,*,5,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [19@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4b;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [19@timeconditions:40] Set("Local/s@tc-maint-00000c4b;2", "TCSTATE=true") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [19@timeconditions:41] Set("Local/s@tc-maint-00000c4b;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [19@timeconditions:42] Return("Local/s@tc-maint-00000c4b;2", "") in new stack
+[2016-04-09 13:00:04] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:18] System("Local/s@tc-maint-00000c4b;2", "/var/lib/asterisk/bin/schedtc.php 60 /var/spool$
+[2016-04-09 13:00:05] VERBOSE[15829][C-00000ce5] pbx.c:     -- Executing [s@tc-maint:19] Answer("Local/s@tc-maint-00000c4b;2", "") in new stack
+[2016-04-09 13:00:05] NOTICE[15828] pbx_spool.c: Call completed to Local/s@tc-maint
+[2016-04-09 13:00:05] VERBOSE[15829][C-00000ce5] pbx.c:   == Spawn extension (tc-maint, s, 19) exited non-zero on 'Local/s@tc-maint-00000c4b;2'
+[2016-04-09 13:00:05] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:00:15] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:00:26] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:00:36] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:00:46] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:00:57] NOTICE[1828] chan_sip.c: Received SIP subscribe for peer without mailbox: 102
+[2016-04-09 13:01:00] VERBOSE[15902] pbx_spool.c:     -- Attempting call on Local/s@tc-maint for application NoCDR() (Retry 1)
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [s@tc-maint:1] NoCDR("Local/s@tc-maint-00000c4c;2", "") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [s@tc-maint:2] Set("Local/s@tc-maint-00000c4c;2", "TCMAINT=RETURN") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [s@tc-maint:3] Gosub("Local/s@tc-maint-00000c4c;2", "timeconditions,6,1()") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:1] Set("Local/s@tc-maint-00000c4c;2", "DB(TC/6/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:2] Set("Local/s@tc-maint-00000c4c;2", "DB(TC/6/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4c;2", "19:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4c;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Goto (timeconditions,6,35)
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4c;2", "0?falsegoto") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4c;2", "0?Set(DB(TC/6)=)") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:37] Set("Local/s@tc-maint-00000c4c;2", "DEVICE_STATE(Custom:TC6)=NOT_INUSE") in new $
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4c;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4c;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:40] Set("Local/s@tc-maint-00000c4c;2", "TCSTATE=true") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:41] Set("Local/s@tc-maint-00000c4c;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [6@timeconditions:42] Return("Local/s@tc-maint-00000c4c;2", "") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [s@tc-maint:4] Gosub("Local/s@tc-maint-00000c4c;2", "timeconditions,18,1()") in new stack
+[2016-04-09 13:01:00] VERBOSE[15903][C-00000ce6] pbx.c:     -- Executing [18@timeconditions:1] Set("Local/s@tc-maint-00000c4c;2", "DB(TC/18/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [9@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4d;2", "0?app-announcement-9,s,1") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [9@timeconditions:40] Set("Local/s@tc-maint-00000c4d;2", "TCSTATE=true") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [9@timeconditions:41] Set("Local/s@tc-maint-00000c4d;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [9@timeconditions:42] Return("Local/s@tc-maint-00000c4d;2", "") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [s@tc-maint:14] Gosub("Local/s@tc-maint-00000c4d;2", "timeconditions,8,1()") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:1] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/8/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:2] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/8/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4d;2", "18:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4d;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Goto (timeconditions,8,35)
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:35] GotoIf("Local/s@tc-maint-00000c4d;2", "0?falsegoto") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4d;2", "0?Set(DB(TC/8)=)") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:37] Set("Local/s@tc-maint-00000c4d;2", "DEVICE_STATE(Custom:TC8)=NOT_INUSE") in new $
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4d;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4d;2", "0?app-announcement-8,s,1") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:40] Set("Local/s@tc-maint-00000c4d;2", "TCSTATE=true") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:41] Set("Local/s@tc-maint-00000c4d;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [8@timeconditions:42] Return("Local/s@tc-maint-00000c4d;2", "") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [s@tc-maint:15] Gosub("Local/s@tc-maint-00000c4d;2", "timeconditions,7,1()") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:1] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/7/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:2] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/7/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4d;2", "17:00-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4d;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Goto (timeconditions,7,28)
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:28] GotoIf("Local/s@tc-maint-00000c4d;2", "0?falsegoto") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:29] ExecIf("Local/s@tc-maint-00000c4d;2", "0?Set(DB(TC/7)=)") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:30] Set("Local/s@tc-maint-00000c4d;2", "DEVICE_STATE(Custom:TC7)=NOT_INUSE") in new $
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:31] ExecIf("Local/s@tc-maint-00000c4d;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:32] GotoIf("Local/s@tc-maint-00000c4d;2", "0?app-announcement-14,s,1") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:33] Set("Local/s@tc-maint-00000c4d;2", "TCSTATE=true") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:34] Set("Local/s@tc-maint-00000c4d;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [7@timeconditions:35] Return("Local/s@tc-maint-00000c4d;2", "") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [s@tc-maint:16] Gosub("Local/s@tc-maint-00000c4d;2", "timeconditions,4,1()") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:1] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/4/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:2] Set("Local/s@tc-maint-00000c4d;2", "DB(TC/4/NOT_INUSESTATE)=NOT_INUSE") in new st$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4d;2", "*,*,31,dec,Asia/Tokyo?truestate") in n$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4d;2", "17:01-09:59,mon-fri,*,*,Asia/Tokyo?tru$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4d;2", "*,sat-sun,*,*,Asia/Tokyo?truestate") i$
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Goto (timeconditions,4,76)
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:76] GotoIf("Local/s@tc-maint-00000c4d;2", "0?falsegoto") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:77] ExecIf("Local/s@tc-maint-00000c4d;2", "0?Set(DB(TC/4)=)") in new stack
+[2016-04-09 13:02:00] VERBOSE[16061][C-00000ce7] pbx.c:     -- Executing [4@timeconditions:78] Set("Local/s@tc-maint-00000c4d;2", "DEVICE_STATE(Custom:TC4)=NOT_INUSE") in new $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:36] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(DB(TC/6)=)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:37] Set("Local/s@tc-maint-00000c4e;2", "DEVICE_STATE(Custom:TC6)=NOT_INUSE") in new $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:38] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:39] GotoIf("Local/s@tc-maint-00000c4e;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:40] Set("Local/s@tc-maint-00000c4e;2", "TCSTATE=true") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:41] Set("Local/s@tc-maint-00000c4e;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [6@timeconditions:42] Return("Local/s@tc-maint-00000c4e;2", "") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [s@tc-maint:4] Gosub("Local/s@tc-maint-00000c4e;2", "timeconditions,18,1()") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:1] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/18/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:2] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/18/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4e;2", "00:00,*,3,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:4] GotoIfTime("Local/s@tc-maint-00000c4e;2", "00:00,*,4,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:5] GotoIfTime("Local/s@tc-maint-00000c4e;2", "00:00,*,5,may,Asia/Tokyo?truestate") $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:6] GotoIfTime("Local/s@tc-maint-00000c4e;2", "00:00,sat-sun,*,*,Asia/Tokyo?truestat$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:7] GotoIfTime("Local/s@tc-maint-00000c4e;2", "10:00-18:00,mon-fri,15-1,apr-jul,Asia$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:8] GotoIfTime("Local/s@tc-maint-00000c4e;2", "00:00,*,29,apr,Asia/Tokyo?truestate")$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:9] GotoIf("Local/s@tc-maint-00000c4e;2", "0?truegoto") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:10] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(DB(TC/18)=)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:11] Set("Local/s@tc-maint-00000c4e;2", "DEVICE_STATE(Custom:TC18)=INUSE") in new st$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:12] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:13] GotoIf("Local/s@tc-maint-00000c4e;2", "0?app-blackhole,busy,1") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:14] Set("Local/s@tc-maint-00000c4e;2", "TCSTATE=false") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:15] Set("Local/s@tc-maint-00000c4e;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [18@timeconditions:16] Return("Local/s@tc-maint-00000c4e;2", "") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [s@tc-maint:5] Gosub("Local/s@tc-maint-00000c4e;2", "timeconditions,20,1()") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:1] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/20/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:2] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/20/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4e;2", "*,sat-sun,*,*?truestate") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Goto (timeconditions,20,19)
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:19] GotoIf("Local/s@tc-maint-00000c4e;2", "0?falsegoto") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:20] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(DB(TC/20)=)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:21] Set("Local/s@tc-maint-00000c4e;2", "DEVICE_STATE(Custom:TC20)=NOT_INUSE") in ne$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:22] ExecIf("Local/s@tc-maint-00000c4e;2", "0?Set(NOT_INUSE)") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:23] GotoIf("Local/s@tc-maint-00000c4e;2", "0?app-announcement-20,s,1") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:24] Set("Local/s@tc-maint-00000c4e;2", "TCSTATE=true") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:25] Set("Local/s@tc-maint-00000c4e;2", "TCOVERRIDE=false") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [20@timeconditions:26] Return("Local/s@tc-maint-00000c4e;2", "") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [s@tc-maint:6] Gosub("Local/s@tc-maint-00000c4e;2", "timeconditions,16,1()") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [16@timeconditions:1] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/16/INUSESTATE)=INUSE") in new stack
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [16@timeconditions:2] Set("Local/s@tc-maint-00000c4e;2", "DB(TC/16/NOT_INUSESTATE)=NOT_INUSE") in new $
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [16@timeconditions:3] GotoIfTime("Local/s@tc-maint-00000c4e;2", "17:00-09:59,mon-fri,*,*,Asia/Tokyo?tr$
+[2016-04-09 13:03:00] VERBOSE[16168][C-00000ce8] pbx.c:     -- Executing [16@timeconditions:4] GotoIf("Local/s@tc-maint-00000c4e;2", "0?truegoto") in new stack
